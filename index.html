@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>WikiPortal</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" />  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/WikiPortal.css">
+</head>
+
+<body>
+
+  <body>
+    <center>
+      <h1><span style="font-family: Georgia;">WikiPortal</span></h1>
+    </center>
+    <center>
+      <h9><span style="font-family: Georgia;">The Free Encyclopedia for DM Portal</span></h9>
+    </center>
+    <center><a href="Acronyms.html">Mast Acronyms</a></center>
+    <center><a href="FAQs.html">FAQs</a></center>
+    <center><img src="images/WikiPortalLogo.png" class="img-rounded" alt="Mast"></center>
+    <div class="container">
+      <div class="row justify-content-center">
+        <input id="srch" type="text">
+        <br />
+        <input type="submit" value="Submit" onClick="searchXML()">
+        <br />
+        <br />
+      </div>
+      <div id="results">
+      </div>
+      <script>
+
+        var dict = '<?xml version="1.0" encoding="UTF-8"?><dictionary>    <norman> <entry> <font size="1">www.WikiPortal.com > Associate Prod</font> <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"> <p><font size="4">Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </font></entry>       <entry><font size="1">www.WikiPortal.com > Distribution Center 2</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> DC2 Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Distribution Center 1</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> DC1 Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Distribution Center 3</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> DC3 Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry> <font size="1">www.WikiPortal.com > Overflow 1</font> <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"> <p><font size="4"><p><font size="4">OF1 Associate Productivity</font></a></p> <font size="2">Associate productivity information, research, and reporting.</font> </entry> <entry><font size="1">www.WikiPortal.com > Distribution Center 7</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> DC7 Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry> <font size="1">www.WikiPortal.com > Distribution Center 8</font> <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> DC8 Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Shipping Building</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> Shipping Associate Productivity</font></a></p> <font size="2"> Associate productivity information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Regional Distribution Centers</font>  <a href = "_rdc_Atlanta_PT_Redlands_Dallas_Vista_Janitrol_Fisher_Ceva_Triangle_triangle_ceva_fisher_janitrol_dallas_atlanta_pt.html"> <p><font size="4">Regional Distribution Centers </font></a></p> <font size="2"> RDC information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Automated Storage & Retrieval System</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> ASRS Associate Productivity</font></a></p> <font size="2"> ASRS information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Marked Out Of Stock</font>  <a href = "MOS_moos.html"> <p><font size="4">MOOS </font></a></p> <font size="2">Marked Out Of Stock information, research, and reporting. </entry> <entry> <font size="1">www.WikiPortal.com > Attendance</font> <a href = "Associate_associate_Attendance_attendance.html"><p><font size="4">Associate Attendance</font></a></p> <font size="2"> Associate attendance information, research, and reporting. </entry> <entry> <font size="1">www.WikiPortal.com > Corrective Action</font> <a href = "Associate_associate_Corr_corrective.html"> <p><font size="4">Associate Corrective Action</font></a></p> <font size="2"> Corrective action information/reporting. </entry> <entry><font size="1">www.WikiPortal.com > Tiers</font>  <a href = "Associate_Review_Reviews_associate_Prod_prod_Productivity_productivity.html"><p><font size="4"> Associate Tiering</font></a></p> <font size="2"> Associate tier information, research, and reporting. </entry> <entry> <font size="1">www.WikiPortal.com > Krono</font> <a href = "kronos.html"><p><font size="4">Kronos</font></a></p> <font size="2"> Kronos information, research, and reporting. </entry> <entry><font size="1">www.WikiPortal.com > Accuaracy1</font>  <a href = "Associate_accuracy.html"><p><font size="4"> Associate Accuracy</font></a></p> <font size="2"> Accuracy information, research, and reporting. </entry>        <entry> <font size="1">www.WikiPortal.com > Review </font> <a href = "Associate_associate_Prod_prod_Productivity_productivity.html"> <p><font size="4">Associate Reviews</font></a></p> <font size="2"> Associate review information, research, and reporting. </entry>        <entry> <font size="1">www.WikiPortal.com > Labor Management Performance Excellence</font> <a href = "lm.html"> <p> <font size="4"> LM </font></a></p> <font size="2"> Manhattan Labor Management information.</entry><entry> <font size="1">www.WikiPortal.com > DC1 Specific Associate Productivity</font> <a href = "A_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"> Express/GOH specific.</entry><entry> <font size="1">www.WikiPortal.com > PkMS</font> <a href = "zpkms.html"> <p><font size="4">PKMS</font></a></p> <font size="2"> Information and research regarding all things WM related. </font></entry><entry> <font size="1">www.WikiPortal.com > DC2 Specific Associate Productivity</font> <a href = "B_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > DC3/RTW/NyCo Specific Associate Productivity</font> <a href = "C_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > DC7 Specific Associate Productivity</font> <a href = "D_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > DC8 Specific Associate Productivity</font> <a href = "E_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > Shipping/SB1/SB2 Specific Associate Productivity</font> <a href = "F_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > OF1/DC3 Specific Associate Productivity</font> <a href = "G_Prod_prod.html"> <p> <font size="4"> Productivity Information </font></a></p> <font size="2"></entry><entry> <font size="1">www.WikiPortal.com > The DOC</font> <a href = "Daughters_Of_Conformity.html"> <p> <font size="4"> DoC </font></a></p> <font size="2"></entry>         </norman></dictionary>';
+
+        //NOTE: if your XML contains any ' characters it will break.. search replace your dictionary for the ' character first replace it with " maybe, this is the fastest solution to this, ok if your dictionary is not dynamic
+
+        function searchXML() {
+
+          var term = document.getElementById('srch').value;
+
+          getNextEntry(term, 0, dict.length - 1);
+        }
+
+        function getNextEntry(term, startIndexPos, endIndexPos) {
+
+          var n = dict.indexOf(term, startIndexPos, endIndexPos);
+          if (n > 0) {
+            //found hit
+            addHitToDIV(n);
+            getNextEntry(term, n + term.length + 1, endIndexPos);
+
+          } else {
+            //done searching
+
+            return -1;
+          }
+
+
+        }
+        function addHitToDIV(startIndexPos) {
+          // var fullEntry;
+          var first = dict.lastIndexOf("<entry>", startIndexPos);
+          var last = dict.indexOf("</entry>", startIndexPos, dict.length - 1);
+          document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + "<p>" + dict.substring(first + 7, last - 1) + "</p><br>";
+        }
+      </script>
+  </body>
+  <center>
+    <footer class="page-footer font-small indigo">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Team</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Chris Holmes</a>
+              </li>
+              <li>
+                <a href="#!">Andrew Prior</a>
+              </li>
+              <li>
+                <a href="#!">Chris "Hand-Daddy" Hand</a>
+              </li>
+              <li>
+                <a href="#!">MGLData@lb.com</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">DM Social Media</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.facebook.com">Facebook</a>
+              </li>
+              <li>
+                <a href="http://www.twitter.com">Twitter</a>
+              </li>
+              <li>
+                <a href="http://www.instagram.com">Instagram</a>
+              </li>
+              <li>
+                <a href="http:www.tiktok.com">Tik Tok</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">DM Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">DM Portal</a>
+              </li>
+              <li>
+                <a href="#!">MR Portal</a>
+              </li>
+              <li>
+                <a href="\\ssnetapp1\trans\MGLData\Links">Research Databases</a>
+              </li>
+              <li>
+                <a href="DMCalendar.html">DM Calendar</a>
+              </li>
+              <li>
+                <a href="ReleaseNotes.html">DM Release Notes</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Hours of Operation</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                M-F 5:30AM - 8:30PM
+              </li>
+              <li>
+                Saturday/Sunday - On-call only
+              </li>
+              <li>
+                Holidays may impact schedule.
+              </li>
+              <li>Phone 734-xxx-xxxx</li>
+              <li>Email MGLData@lb.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </footer>
+    <div class="footer" data-el-section="other projects">
+      <div class="footer-sidebar">
+        <div class="footer-sidebar-content">
+          <div class="footer-sidebar-icon sprite svg-Wikimedia-logo_black">
+          </div>
+          <div class="footer-sidebar-text jsl10n" data-jsl10n="footer-description">
+            WikiPortal is hosted by the <a href="//MorseRoadDataManagementTeam.org/">Morse Road Data Management
+              Team</a>, a non-profit organization that also hosts a range of other projects.
+          </div>
+        </div>
+      </div>
+
+
+
+      </footer>
+  </center>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Morse Road Data Management Team</a>
+  </div>
+  <!-- Copyright -->
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+<!-- <center><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html?s_cid=bb-coronavirus-2019-ncov-NCIRD"
+    title="image of SARS-CoV-2"><img src="http://www.cdc.gov/coronavirus/2019-ncov/images/Coronavirus-badge-300.png"
+      style="width:300px; height:250px; border:0px;" alt="image of Coronavirus Disease 2019 (COVID-19)" /></a></center>
+ -->
+</html>
