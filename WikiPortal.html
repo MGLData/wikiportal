@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>WikiPortal</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="WikiPortal.css">
+
+</head>
+
+<body>
+  <center>
+    <h1><span style="font-family: Georgia;">WikiPortal</span></h1>
+  </center>
+  <center>
+    <h9><span style="font-family: Georgia;">The Free Encyclopedia for DM Portal</span></h9>
+  </center>
+  <center><img src="WikiPortalLogo.png" class="img-rounded" alt="Mast"></center>
+  <center>
+    <p1>This page is currently under construction</p1>
+  </center>
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form action="" class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body"></i>
+            </div>
+            <!--end of col-->
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" id="srch" type="text">
+            </div>
+            <!--end of col-->
+            <div class="col-auto">
+              <input value="Submit" onClick="searchXML()" type="submit">Search</button>
+              <div id="results">
+              </div>
+              <script>
+
+                var dict = '<?xml version="1.0" encoding="UTF-8"?><dictionary>    <norman>        <entry>A 1. the male or positive principle, yang 2. convex, raised 3.interjection ofresponse 4. interjection of fear S. vocative particle 6. a tooth in the Manchuscript A A an interjection of casual response </entry>        <entry>A I BUKDAN the outside edge of a piece of folded paper </entry>        <entry>A JIJUN I ACANGGA a bronze identification token with raised characters used togain admittance to a city at night </entry>        <entry> <a href = "file:///D:/DM_Portal_Web/Main_Page.html"> DC3/RTW Productivity</a> A male JILGAN a yang tone in music A FA SERE ONGGOLO see afanggala </entry>        <entry>A SI a sound used for driving chickens or birds </entry>        <entry>A TA (onom.) the sound of a commotion ABA 1. hunt, battue 2. where     </norman></dictionary>';
+
+                //NOTE: if your XML contains any ' characters it will break.. search replace your dictionary for the ' character first replace it with " maybe, this is the fastest solution to this, ok if your dictionary is not dynamic
+
+                function searchXML() {
+
+                  var term = document.getElementById('srch').value;
+
+                  getNextEntry(term, 0, dict.length - 1);
+                }
+
+                function getNextEntry(term, startIndexPos, endIndexPos) {
+
+                  var n = dict.indexOf(term, startIndexPos, endIndexPos);
+                  if (n > 0) {
+                    //found hit
+                    addHitToDIV(n);
+                    getNextEntry(term, n + term.length + 1, endIndexPos);
+
+                  } else {
+                    //done searching
+
+                    return -1;
+                  }
+
+
+                }
+                function addHitToDIV(startIndexPos) {
+                  var fullEntry;
+                  var first = dict.lastIndexOf("<entry>", startIndexPos);
+                  var last = dict.indexOf("</entry>", startIndexPos, dict.length - 1);
+                  document.getElementById('results').innerHTML = document.getElementById('results').innerHTML + "<p>" + dict.substring(first + 7, last - 1) + "</p><br>";
+                }
+              </script>
+            </div>
+            <!--end of col-->
+          </div>
+        </form>
+      </div>
+      <!--end of col-->
+    </div>
+  </div>
+
+  <center>
+    <footer class="page-footer font-small indigo">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Team</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Chris Holmes</a>
+              </li>
+              <li>
+                <a href="#!">Andrew Prior</a>
+              </li>
+              <li>
+                <a href="#!">Chris "Hand-Daddy" Hand</a>
+              </li>
+              <li>
+                <a href="#!">MGLData@lb.com</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Social Media</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Facebook</a>
+              </li>
+              <li>
+                <a href="#!">Twitter</a>
+              </li>
+              <li>
+                <a href="#!">Instagram</a>
+              </li>
+              <li>
+                <a href="#!">Tik Tok</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">DM Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">DM Portal</a>
+              </li>
+              <li>
+                <a href="#!">MR Portal</a>
+              </li>
+              <li>
+                <a href="#!">Research Databases</a>
+              </li>
+              <li>
+                <a href="#!">DM Calendar</a>
+              </li>
+              <li>
+                <a href="#!">DM Release Notes</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Hours of Operation</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                M-F 5:30AM - 8:30PM
+              </li>
+              <li>
+                Saturday/Sunday - On-call only
+              </li>
+              <li>
+                Holidays may impact schedule.
+              </li>
+              <li>Phone 734-xxx-xxxx</li>
+              <li>Email MGLData@lb.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </footer>
+    <div class="footer" data-el-section="other projects">
+      <div class="footer-sidebar">
+        <div class="footer-sidebar-content">
+          <div class="footer-sidebar-icon sprite svg-Wikimedia-logo_black">
+          </div>
+          <div class="footer-sidebar-text jsl10n" data-jsl10n="footer-description">
+            WikiPortal is hosted by the <a href="//MorseRoadDataManagementTeam.org/">Morse Road Data Management
+              Team</a>, a non-profit organization that also hosts a range of other projects.
+          </div>
+        </div>
+      </div>
+
+
+
+      </footer>
+  </center>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Morse Road Data Management Team</a>
+  </div>
+  <!-- Copyright -->
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

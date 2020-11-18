@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="mul" dir="ltr">
+<head>
+<!-- {{colophon}} -->
+<meta charset="utf-8">
+<title>Wikipedia</title>
+<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico">
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/">
+<link rel="stylesheet" href="//meta.wikimedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.wm-portal&amp;only=styles&amp;skin=vector&amp;*">
+<script async src="//meta.wikimedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.wm-portal&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<style type="text/css">
+.central-featured-logo {
+    background-image: url("//upload.wikimedia.org/wikipedia/meta/0/08/Wikipedia-logo-v2_1x.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .central-featured-logo {
+        background-image: url("//upload.wikimedia.org/wikipedia/meta/d/d1/Wikipedia-logo-v2_1.5x.png");
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    .central-featured-logo {
+        background-image: url("//upload.wikimedia.org/wikipedia/meta/b/be/Wikipedia-logo-v2_2x.png");
+    }
+}
+</style>
+<!--[if lt IE 8]><style type="text/css">
+.bookshelf-container .bookend, .otherprojects-icon {
+    zoom: 1;
+    display: inline;
+}
+</style><![endif]-->
+</head>
+<body id="www-wikipedia-org">
+
+<h1 class="central-textlogo" style="font-variant: small-caps;">
+<img src="//upload.wikimedia.org/wikipedia/meta/6/6d/Wikipedia_wordmark_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/a/a9/Wikipedia_wordmark_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/8/8a/Wikipedia_wordmark_2x.png 2x" width="174" height="30" alt="WikipediA" title="Wikipedia">
+</h1>
+
+<!-- container div for the central logo and the links to the most viewed language editions -->
+<div class="central-featured">
+
+<!-- logo -->
+<div class="central-featured-logo"></div>
+
+<!-- Rankings from http://stats.wikimedia.org/EN/Sitemap.htm -->
+<!-- Article counts from http://meta.wikimedia.org/wiki/List_of_Wikipedias/Table -->
+{{topn|10|views}}
+
+</div>
+
+<!-- Search form -->
+<div class="search-container">
+
+<form class="search-form" action="//www.wikipedia.org/search-redirect.php">
+<fieldset>
+
+<!-- search-redirect.php is project-independent, requires a family -->
+<input type="hidden" name="family" value="wikipedia">
+
+<select id="searchLanguage" name="language">
+<!-- 100,000+ content pages, sorted by romanization -->
+{{wikis|option|≥100000}}
+</select>
+
+<input id="searchInput" name="search" type="search" size="20" autofocus="autofocus" accesskey="F" dir="auto">
+
+<button class="formBtn" type="submit" name="go"><img src="//upload.wikimedia.org/wikipedia/meta/thumb/7/7e/Vector_search_icon.svg/12px-Vector_search_icon.svg.png" srcset="//upload.wikimedia.org/wikipedia/meta/thumb/7/7e/Vector_search_icon.svg/18px-Vector_search_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/meta/thumb/7/7e/Vector_search_icon.svg/24px-Vector_search_icon.svg.png 2x" alt="Search"></button>
+
+<input type="hidden" value="Go" name="go">
+
+</fieldset>
+</form>
+</div>
+
+<hr>
+
+<div class="search-container language-search">
+<form action="//incubator.wikimedia.org/w/index.php" method="get" name="searchwiki">
+<input type="hidden" name="title" value="Special:SearchWiki">
+<input type="hidden" name="uselang" value="en">
+<input type="hidden" name="searchproject" value="p">
+<label for="langsearch-input">Find a language:</label>
+<input type="search" name="searchlanguage" id="langsearch-input" value="" dir="auto">
+<input class="formBtn" type="submit" value="  →  ">
+</form>
+
+</div>
+
+<!-- Bookshelves -->
+<h2 class="bookshelf-container">
+<span class="bookshelf"><span class="bookend" style="width: 360px /* 9 * 40 */;"></span><span class="text">1&nbsp;000&nbsp;000+</span><span class="bookend" style="width: 360px;"></span></span>
+</h2>
+
+<!-- 1,000,000+ content pages -->
+<div class="langlist langlist-large hlist">
+{{wikis|ul|≥1000000}}
+</div>
+
+<!-- Bookshelves -->
+<h2 class="bookshelf-container">
+<span class="bookshelf"><span class="bookend" style="width: 280px /* 7 * 40 */;"></span><span class="text">100&nbsp;000+</span><span class="bookend" style="width: 280px;"></span></span>
+</h2>
+
+<!-- 100,000+ content pages -->
+<div class="langlist langlist-large hlist">
+{{wikis|ul|100000}}
+</div>
+
+<!-- Bookshelves -->
+<h2 class="bookshelf-container">
+<span class="bookshelf"><span class="bookend" style="width: 200px /* 5 * 40 */;"></span><span class="text">10&nbsp;000+</span><span class="bookend" style="width: 200px;"></span></span>
+</h2>
+
+<!-- 10,000+ content pages -->
+<div class="langlist hlist">
+{{wikis|ul|10000}}
+</div>
+
+<!-- Bookshelves -->
+<h2 class="bookshelf-container">
+<span class="bookshelf"><span class="bookend" style="width: 120px /* 3 * 40 */;"></span><span class="text">1&nbsp;000+</span><span class="bookend" style="width: 120px;"></span></span>
+</h2>
+
+<!-- 1,000+ content pages -->
+<div class="langlist hlist">
+{{wikis|ul|1000}}
+</div>
+
+<!-- Bookshelves -->
+<h2 class="bookshelf-container">
+<span class="bookshelf"><span class="bookend" style="width: 40px /* 1 * 40 */;"></span><span class="text">100+</span><span class="bookend" style="width: 40px;"></span></span>
+</h2>
+
+<!-- 100+ content pages -->
+<div class="langlist langlist-tiny hlist">
+{{wikis|ul|100}}
+</div>
+
+<!-- Other languages -->
+<div class="langlist langlist-others hlist">
+<ul>
+<li><a href="//meta.wikimedia.org/wiki/List_of_Wikipedias" lang="en">Other languages</a></li>
+<li><a href="//de.wikipedia.org/wiki/Wikipedia:Sprachen" lang="de">Weitere Sprachen</a></li>
+<li><a href="//meta.wikimedia.org/wiki/Liste_des_Wikip%C3%A9dias" lang="fr">Autres langues</a></li>
+<li><a href="//pl.wikipedia.org/wiki/Wikipedia:Lista_wersji_j%C4%99zykowych" lang="pl">Kompletna lista języków</a></li>
+<li><a href="//ja.wikipedia.org/wiki/Wikipedia:%E5%A4%9A%E8%A8%80%E8%AA%9E%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AE%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2" lang="ja">他の言語</a></li>
+<li><a href="//meta.wikimedia.org/wiki/Lista_de_Wikipedias" lang="es">Otros idiomas</a></li>
+<li><a href="//zh.wikipedia.org/wiki/Wikipedia:%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E8%AF%AD%E8%A8%80%E5%88%97%E8%A1%A8" lang="zh" id="zh_others" data-convert-Hans="其他语言">其他語言</a></li>
+<li><a href="//ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%92" lang="ru">Другие языки</a></li>
+<li><a href="//eo.wikipedia.org/wiki/Vikipedio:Internacia_Vikipedio" lang="eo">Aliaj lingvoj</a></li>
+<li><a href="//meta.wikimedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC%EC%9D%98_%EB%AA%A9%EB%A1%9D" lang="ko">다른 언어</a></li>
+<li><a href="//vi.wikipedia.org/wiki/Wikipedia:Phi%C3%AAn_b%E1%BA%A3n_ng%C3%B4n_ng%E1%BB%AF" lang="vi">Ngôn ngữ khác</a></li>
+</ul>
+</div>
+
+<hr>
+
+<!-- Other projects -->
+<div class="otherprojects">
+
+<div class="otherprojects-item">
+<a href="//www.wiktionary.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/3/3b/Wiktionary-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/c/c2/Wiktionary-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/0/05/Wiktionary-logo_sister_2x.png 2x" width="35" height="35" alt=""></span> Wiktionary</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikinews.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/a/aa/Wikinews-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/e/e7/Wikinews-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/4/4b/Wikinews-logo_sister_2x.png 2x" width="47" height="24" alt=""></span> Wikinews</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikiquote.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/c/c8/Wikiquote-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/a/aa/Wikiquote-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/9/97/Wikiquote-logo_sister_2x.png 2x" width="35" height="41" alt=""></span> Wikiquote</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikibooks.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/7/74/Wikibooks-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/4/47/Wikibooks-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/0/0f/Wikibooks-logo_sister_2x.png 2x" width="35" height="35" alt=""></span> Wikibooks</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikidata.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/0/00/Wikidata-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/5/58/Wikidata-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/e/ec/Wikidata-logo_sister_2x.png 2x" width="47" height="26" alt=""></span> Wikidata</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//species.wikimedia.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/8/8c/Wikispecies-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/4/43/Wikispecies-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/7/7d/Wikispecies-logo_sister_2x.png 2x" width="35" height="41" alt=""></span> Wikispecies</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikisource.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/2/27/Wikisource-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/0/06/Wikisource-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/a/a4/Wikisource-logo_sister_2x.png 2x" width="35" height="37" alt=""></span> Wikisource</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikiversity.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/a/af/Wikiversity-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/d/df/Wikiversity-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/6/69/Wikiversity-logo_sister_2x.png 2x" width="35" height="28" alt=""></span> Wikiversity</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.wikivoyage.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/7/74/Wikivoyage-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/4/4c/Wikivoyage-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/4/4e/Wikivoyage-logo_sister_2x.png 2x" width="35" height="35" alt=""></span> Wikivoyage</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//commons.wikimedia.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/9/90/Commons-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/4/4e/Commons-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/b/b6/Commons-logo_sister_2x.png 2x" width="35" height="47" alt="" style="vertical-align: top;"></span> Commons</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//www.mediawiki.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/1/16/MediaWiki-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/f/f7/MediaWiki-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/2/2e/MediaWiki-logo_sister_2x.png 2x" width="47" height="36" alt=""></span> MediaWiki</a>
+</div>
+
+<div class="otherprojects-item">
+<a href="//meta.wikimedia.org/"><span class="icon"><img src="//upload.wikimedia.org/wikipedia/meta/f/f2/Meta-logo_sister_1x.png" srcset="//upload.wikimedia.org/wikipedia/meta/6/61/Meta-logo_sister_1.5x.png 1.5x, //upload.wikimedia.org/wikipedia/meta/a/ac/Meta-logo_sister_2x.png 2x" width="35" height="35" alt=""></span> Meta-Wiki</a>
+</div>
+
+</div>
+
+<!-- Site info -->
+<div class="wm-site-info">
+<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="https://upload.wikimedia.org/wikipedia/meta/3/3a/A_Wikimedia_project_1.5x.png 1.5x, https://upload.wikimedia.org/wikipedia/meta/b/b7/A_Wikimedia_project_2x.png 2x" width="88" height="31" alt="A Wikimedia Project"></a>
+</div>
+
+<div style="text-align:center"><a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> | <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a></div>
+</body>
+</html>
